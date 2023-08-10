@@ -9,21 +9,54 @@
         line-height: 1.5;
         margin: 20px;
       }
+      body{
+        background-color: rgb(26, 138, 243);
+        text-align: center;
+      } 
+.image-box {
+max-width: 600px;
+margin: 40px auto;
+padding: 20px;
+border: 3px solid rgb(0, 0, 0);
+border-radius: 10px;
+box-sizing: border-box;
+text-align: center;
+}
+
+.image-box img {
+max-width: 100%;
+max-height: 800px;
+border-radius: 5px;
+}
+      .image-box img {
+ max-width: 100%;
+ max-height: 800px; 
+ border-radius: 5px;
+  }
     </style>
   </head>
   <body>
     <h1>Cálculo do IMC</h1>
     <form>
       <label>Informe a sua altura em metros:</label>
-      <input type="text" id="altura"><br>
+      <input type="text" id="altura"><br><br>
       <label>Informe o seu peso em quilogramas:</label>
-      <input type="text" id="peso"><br>
+      <input type="text" id="peso"><br><br>
       <button type="button" onclick="calcularIMC()">Calcular IMC</button>
-    </form>
+    </form><br>
+    
     <div id="resultado"></div>
-    <img src="pseudocodigo.png" alt="imagem do codigo"><br>
-    <img src="execução.png" alt="imagem do codigo"><br>
-    <img src="codigojs.png" alt="imagem do codigo"><br>
+    <div class="image-box">
+      <img src="pseudocodigo.png" alt="Visualg!">
+      </div>
+      <div class="image-box">
+      <img src="execução.png" alt="Algoritmo">
+      </div>
+       <div class="image-box" >
+       <img src="codigojs.png"></div>
+      </body>
+      </html>
+    
     <script>
       function calcularIMC() {
         let altura = parseFloat(document.getElementById("altura").value);
@@ -32,11 +65,11 @@
         var resultado = document.getElementById("resultado");
         resultado.innerHTML = "<p>Seu IMC é: " + imc.toFixed(2) ;
         if (imc < 18) {
-          resultado.innerHTML += "Voc/ê est/á abaixo do peso ideal.</p>";
+          resultado.innerHTML += "Você está abaixo do peso ideal.</p>";
         } else if (imc <= 25) {
           resultado.innerHTML += "Seu peso está dentro do ideal.</p>";
         } else {
-          resultado.innerHTML += "Voc/ê est/á acima do peso ideal.</p>";
+          resultado.innerHTML += "Você está acima do peso ideal.</p>";
         }
       }
     </script>
